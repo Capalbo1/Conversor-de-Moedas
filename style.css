@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+    background-color: rgb(189, 189, 189)
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px #ffffff;
+}
+
+.central {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço igualmente entre os filhos */
+    align-items: flex-start;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.central section {
+    
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0);
+    width: 50%; 
+    min-height: 500px;
+}
+
+
+.resultado {
+    background-color: #f3080804;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    align-items: center;
+    position: relative;
+    top: 300px;
+    
+
+}
+
+
+
+.resultado h2{
+    font-size: 3em;
+}
+
+.dinheiro label{
+    
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+    margin-bottom: 8px; /* Espaçamento inferior para separar do próximo elemento */
+    display: block;
+    padding: 20px; /* Certificando-se de que o label ocupa a largura total disponível */
+}
+
+.form {
+    --width-of-input: 400px;
+    --border-height: 2px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: #5891ff;
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+   }
+   /* styling of Input */
+   .input {
+    color: #0076d6;
+    font-size: 2rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+   }
+   /* styling of animated border */
+   .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+   }
+   /* Hover on Input */
+   input:hover {
+    background: var(--input-hovered-color);
+   }
+   
+   input:focus {
+    outline: none;
+   }
+   /* here is code of animated border */
+   input:focus ~ .input-border {
+    width: 100%;
+   }
+   /* === if you want to do animated border on typing === */
+   /* remove input:focus code and uncomment below code */
+   /* input:valid ~ .input-border{
+     width: 100%;
+   } */
+
+
+
+
+.central aside {
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0);
+    width: 50%; 
+    height: 500px;
+}
+
+
+
+footer {
+    background-color: #f30808;
+    color: rgb(0, 0, 0);
+    min-height: 40px;
+    width: 100%;
+    
+    
+}
+h3{
+    font-size: 1.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+

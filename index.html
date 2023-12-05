@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons8-dinheiro-96.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Conversor Do Real R$ </h1>
+        </header>
+        <div class="central">
+            <section>
+                <div class="form">
+                    <input class="input" placeholder="Digite o valor $" required="" type="number">
+                    <span class="input-border"></span>
+                  </div>
+                <div class = "resultado"> <h2>x</h2></div>
+            </section>
+      
+        <aside><canvas id="myChart" width="400" height="400"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['DÓLAR', 'EURO', 'BITCOIN', 'LIBRA'],
+                        datasets: [{
+                            label: 'Comparativo Real',
+                            data: [4.88, 5.31, 188.00, 18],
+                            backgroundColor: ['red', 'green', 'blue', 'yellow'],
+                        }]
+                    },
+                });
+            </script>
+            </aside>
+    </div>
+        <footer> <h3>Falando tanto em Dinheiro , me faça um Pix e me ajude a continuar estudando.</h3></footer>
+    </main>
+</body>
+</html>
